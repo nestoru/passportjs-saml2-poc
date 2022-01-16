@@ -1,0 +1,17 @@
+{
+    "name": "PassportJS-SAML2-POC",
+    "description": "PassportJS SAML2 example tested with OneLogin",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.1",
+        "express": "^4.17.2",
+        "express-session": "^1.17.2",
+        "getenv": "^1.0.0",
+        "passport": "^0.2.2",
+        "passport-saml": "^0.15.0"
+    },
+    "license": "MIT"
+}
