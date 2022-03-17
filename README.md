@@ -24,9 +24,10 @@ Authenticated
 ./ngrok http localhost:3000
 ```
 3. Run your application as explained in the Quick Start section. The app uses PassportJS with a SAML 2.0 Strategy to provide authentication via the IdP. This PassportJS related code is what is called the Service Provider (SP).
-4. Point the IdP ACS (Consumer) URL Validator and ACS (Consumer) URL to the same /login endpoint or your app (which contains the SP code), for example:
+4. Point the IdP ACS (Consumer) URL to the /callback endpoint of your app (which contains the SP code) and the ACS (Consumer) URL Validator to the /callback endpoint of your app, for example:
 ```
-http://d529-72-28-211-41.ngrok.io/login
+ACS (Consumer) URL: http://d529-72-28-211-41.ngrok.io/callback
+ACS (Consumer) URL validator: http://d529-72-28-211-41.ngrok.io/login
 ```
 5. Setup the IdP with "SAML initiator = Service Provider"
 6. Setup the IdP to provide the "email" parameter in the SAML payload sent to the SP.
