@@ -17,6 +17,15 @@ Not authenticated
 Authenticated
 ```
 
+### OneLogin example
+- In the SP app add a user that should be forced to login via SSO
+- In the IdP (OnleLogin) add a new app of type "SAML Custom Connector (Advanced)" 
+- In the IdP app settings set the "ACS (Consumer) URL Validator" with a regex that identifies the URL from the SP that the user will use to land into the SP.
+- In the IdP app settings set the "ACS (Consumer) URL" add the precise callback URL from the SP that the user will use to land into the SP.
+- In the IdP app settings, section parameters add the email as a custom field.
+- In the SP app configure for the user the usage of SSO by supplying the X.509 Certificate details, the SAML 2.0 Endpoint (HTTP), and the Issuer URL from the OneLogin app configuration SSO section.
+- Go to login page in SP, provide email and the user should be redirected to the OneLogin IdP where after login should land back into the SP already logged in.
+
 ## Setup
 1. In your IdP (OneLogin offers free accounts to test this) create an app of type SAML. This is the Identity Provider (IdP).
 2. install ngrok locally and point to your application.
