@@ -18,8 +18,8 @@ passport.use(
   },
   function(profile, done) {
     console.log(JSON.stringify(profile));
-    if (!profile.email) {
-      return done(new Error("Error: Configure your IdP to provide the email parameter"), null);
+    if (!profile.nameID) {
+      return done(new Error("Error: Configure your IdP to provide profile.nameID in the payload'), null);
     }
     return done(null, profile);
   }
