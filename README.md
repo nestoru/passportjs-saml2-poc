@@ -39,6 +39,6 @@ ACS (Consumer) URL: http://d529-72-28-211-41.ngrok.io/login/callback
 ACS (Consumer) URL validator: http://d529-72-28-211-41.ngrok.io/login/callback
 ```
 5. Setup the IdP with "SAML initiator = Service Provider"
-6. Setup the IdP to provide the "email" parameter in the SAML payload sent to the SP.
+6. If needed, setup the IdP to provide the  profile.nameID in the SAML payload sent to the SP.
 7. Create a user with same email in the IdP and in the SP
 8. Access the app as explained in the Quick Start section
